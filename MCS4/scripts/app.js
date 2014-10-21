@@ -33,11 +33,14 @@
       // Cordova will wait 5 very long seconds to do it for you.
       navigator.splashscreen.hide();
 
+      // Adds a slide transition between views (defaults to slide left)
+      //app.application = new kendo.mobile.Application(document.body, { transition: "slide" });
       app = new kendo.mobile.Application(document.body, {
         
         // comment out the following line to get a UI which matches the look
         // and feel of the operating system
-        skin: 'flat',
+          skin: 'flat',
+          transition: "slide",
 
         // the application needs to know which view to load first
         initial: 'views/home.html'
