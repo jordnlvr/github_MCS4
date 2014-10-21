@@ -6,7 +6,7 @@
   "DisplayName": "Concessions",
   "Author": "Kelly Seale",
   "Description": "App for concessions at Warren",
-  "BundleVersion": "1.04",
+  "BundleVersion": "1.05",
   "AndroidVersionCode": "1",
   "iOSDeviceFamily": [
     "1",
