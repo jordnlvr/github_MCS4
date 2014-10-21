@@ -12,34 +12,43 @@
     "1",
     "2"
   ],
-  "iOSBackgroundMode": [],
-  "WP8TileTitle": "",
-  "WP8Publisher": "",
+  "iOSBackgroundMode": [
+    "location",
+    "newsstand-content"
+  ],
+  "WP8TileTitle": "Cession Stand",
+  "WP8Publisher": "Kelly Seale",
   "WP8Capabilities": [],
   "WP8Requirements": [],
-  "WP8PublisherID": "",
-  "WP8ProductID": "",
+  "WP8PublisherID": "{73d6f29f-eb17-40d3-af2d-1584e2b24753}",
+  "WP8ProductID": "{8d52cd9a-5a21-4d9c-9e8a-a2e5af9f07e0}",
   "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
   "FrameworkVersion": "3.5.0",
   "CorePlugins": [
+    "com.phonegap.plugins.barcodescanner",
     "org.apache.cordova.battery-status",
     "org.apache.cordova.camera",
+    "org.apache.cordova.media-capture",
     "org.apache.cordova.console",
     "org.apache.cordova.contacts",
     "org.apache.cordova.device",
     "org.apache.cordova.device-motion",
     "org.apache.cordova.device-orientation",
-    "org.apache.cordova.dialogs",
     "org.apache.cordova.file",
     "org.apache.cordova.file-transfer",
     "org.apache.cordova.geolocation",
     "org.apache.cordova.globalization",
     "org.apache.cordova.inappbrowser",
     "org.apache.cordova.media",
-    "org.apache.cordova.media-capture",
     "org.apache.cordova.network-information",
+    "org.apache.cordova.dialogs",
+    "com.phonegap.plugins.PushPlugin",
     "org.apache.cordova.splashscreen",
+    "com.phonegap.plugins.sqlite",
     "org.apache.cordova.statusbar",
+    "com.telerik.plugin.eqatecanalytics",
+    "com.telerik.feedback",
+    "com.telerik.mobiletesting",
     "org.apache.cordova.vibration"
   ],
   "AndroidPermissions": [
@@ -73,5 +82,10 @@
     "ID_RESOLUTION_WXGA",
     "ID_RESOLUTION_HD720P"
   ],
-  "Framework": "Cordova"
+  "Framework": "Cordova",
+  "CordovaPluginVariables": {
+    "com.telerik.mobiletesting": {
+      "IOS_APP_URL": ""
+    }
+  }
 }
