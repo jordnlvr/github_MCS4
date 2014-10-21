@@ -6,6 +6,7 @@
     <title>Foundation | Welcome</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <script src="js/vendor/modernizr.js"></script>
+    <script src="kendo/styles/kendo.mobile.all.min.css"></script>
     <link href="css/ratchetCS.css" rel="stylesheet" />
     <link href="css/ratchet-theme-ios.min.css" rel="stylesheet" />
     <style>
@@ -21,10 +22,6 @@
 
 </head>
 <body class="thi">
-
-    <!-----FULL CONTENT AREA----------FULL CONTENT AREA----------FULL CONTENT AREA----------FULL CONTENT AREA----->
-    <!------------------------------------------------------------------------------------------------------------>
-
 
     <div class="panel" style="background-color: transparent; border: 0; width: 85%; max-width: 400px; margin: 0 auto; padding-top: 50px;">
         <div id="login-dropdown">
@@ -45,18 +42,57 @@
             </div>
         </div>
     </div>
-    <!------------------------------------------------------------------------------------------------------------>
-
 
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/fastclick.js"></script>
     <script src="js/foundation.min.js"></script>
     <script src="js/cession.js"></script>
+    <script src="cordova.js"></script>
+    <script src="kendo/js/kendo.mobile.min.js"></script>
     <script>
         $(document).foundation();
+        
+        // Adds a slide transition between views (defaults to slide left)
+        app.application = new kendo.mobile.Application(document.body, { transition: "slide" });
 
+        (function(g) {
 
+  var productId = "5fa752ae121249ce9dfbb413aaadab1a"; // App unique product key
+
+  // Make analytics available via the window.analytics variable
+  // Start analytics by calling window.analytics.Start()
+  var analytics = g.analytics = g.analytics || {};
+  analytics.Start = function()
+  {
+    // Handy shortcuts to the analytics api
+    var factory = window.plugins.EqatecAnalytics.Factory;
+    var monitor = window.plugins.EqatecAnalytics.Monitor;
+    // Create the monitor instance using the unique product key for Cession Analytics
+    var settings = factory.CreateSettings(productId);
+    settings.LoggingInterface = factory.CreateTraceLogger();
+    factory.CreateMonitorWithSettings(settings,
+      function() {
+        console.log("Monitor created");
+        // Start the monitor inside the success-callback
+        monitor.Start(function() {
+          console.log("Monitor started");
+        });
+      },
+      function(msg) {
+        console.log("Error creating monitor: " + msg);
+      });
+  }
+  analytics.Stop = function()
+  {
+    var monitor = window.plugins.EqatecAnalytics.Monitor;
+    monitor.Stop();
+  }
+  analytics.Monitor = function()
+  {
+    return window.plugins.EqatecAnalytics.Monitor;
+  }    
+})(window);
 
     </script>
 </body>
