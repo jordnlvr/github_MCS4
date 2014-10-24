@@ -184,6 +184,7 @@
     <Resource Include="App_Resources\WP8\SplashScreenImage.jpg" />
     <Resource Include="App_Resources\WP8\Tiles\Iconic\110x110.png" />
     <Resource Include="App_Resources\WP8\Tiles\Iconic\202x202.png" />
+    <Content Include="js\analytics.js" />
     <Content Include="js\cession.js">
       <SubType>Content</SubType>
     </Content>
@@ -250,6 +251,7 @@
     <Content Include="js\jquery-1.11.1.min.js">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="js\jquery-1.9.1.min.js" />
     <Content Include="js\kendo.mobile.min.js">
       <SubType>Content</SubType>
     </Content>

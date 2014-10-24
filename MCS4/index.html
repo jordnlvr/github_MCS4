@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Foundation | Welcome</title>
     <link rel="stylesheet" href="css/foundation.css" />
-    <script src="js/vendor/modernizr.js"></script>
     <script src="kendo/styles/kendo.mobile.all.min.css"></script>
     <link href="css/ratchetCS.css" rel="stylesheet" />
     <link href="css/ratchet-theme-ios.min.css" rel="stylesheet" />
@@ -41,53 +40,32 @@
                 </div>
             </div>
         </div>
+        <div data-role="view" id="vw1">
+            <div id="result-area" class="result-area ch60" style="color: white;">
+                <div id="results" class="results ch100" style="color: white;">
+                    <label id="console" class="desc" style="color: white;"></label>
+                    <div id="analytics-error" style="color: white;">
+
+                    </div>
+                </div>
+                <div class="separator"></div>
+            </div>
+        </div>
     </div>
 
-
-    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/modernizr.js"></script>
     <script src="js/vendor/fastclick.js"></script>
-    <script src="js/foundation.min.js"></script>
     <script src="js/cession.js"></script>
     <script src="cordova.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
     <script src="kendo/js/kendo.mobile.min.js"></script>
     <script src="scripts/app.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/analytics.js"></script>
     <script>
         $(document).foundation();
-        
-        (function (g) {
 
-            var productId = "5fa752ae121249ce9dfbb413aaadab1a"; // App unique product key
-
-            // Make analytics available via the window.analytics variable
-            // Start analytics by calling window.analytics.Start()
-            var analytics = g.analytics = g.analytics || {};
-            analytics.Start = function () {
-                // Handy shortcuts to the analytics api
-                var factory = window.plugins.EqatecAnalytics.Factory;
-                var monitor = window.plugins.EqatecAnalytics.Monitor;
-                // Create the monitor instance using the unique product key for Cession Analytics
-                var settings = factory.CreateSettings(productId);
-                settings.LoggingInterface = factory.CreateTraceLogger();
-                factory.CreateMonitorWithSettings(settings,
-                  function () {
-                      console.log("Monitor created");
-                      // Start the monitor inside the success-callback
-                      monitor.Start(function () {
-                          console.log("Monitor started");
-                      });
-                  },
-                  function (msg) {
-                      console.log("Error creating monitor: " + msg);
-                  });
-            }
-            analytics.Stop = function () {
-                var monitor = window.plugins.EqatecAnalytics.Monitor;
-                monitor.Stop();
-            }
-            analytics.Monitor = function () {
-                return window.plugins.EqatecAnalytics.Monitor;
-            }
-        })(window);
+        window.analytics.Start();
 
     </script>
 </body>

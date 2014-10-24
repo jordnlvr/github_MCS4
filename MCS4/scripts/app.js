@@ -31,7 +31,7 @@
       
       // hide the splash screen as soon as the app is ready. otherwise
       // Cordova will wait 5 very long seconds to do it for you.
-      navigator.splashscreen.hide();
+      //navigator.splashscreen.hide();
 
       // Adds a slide transition between views (defaults to slide left)
       //app.application = new kendo.mobile.Application(document.body, { transition: "slide" });
