@@ -293,10 +293,12 @@
     <Content Include="page1.html">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="barcode.html" />
     <Content Include="pageTemplate.html">
       <SubType>Content</SubType>
     </Content>
     <Content Include="scripts\app.js" />
+    <Content Include="scripts\main.js" />
     <Content Include="styles\main.css" />
     <Content Include="views\contacts.html" />
     <Content Include="views\home.html" />

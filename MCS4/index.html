@@ -51,21 +51,32 @@
                 <div class="separator"></div>
             </div>
         </div>
+
+        <div id="error-view" data-role="modalview">
+            <div class="error-header" data-role="header" style="display: none;">
+                <div data-role="navbar">
+                    <span>Error</span>
+                    <a data-click="closeError" data-role="button" data-align="right">Close</a>
+                </div>
+            </div>
+
+            <div class="message"></div>
+        </div>
+
     </div>
 
+    <script src="scripts/app.js"></script>
+    <script src="kendo/js/kendo.mobile.min.js"></script>
     <script src="js/vendor/modernizr.js"></script>
     <script src="js/vendor/fastclick.js"></script>
     <script src="js/cession.js"></script>
-    <script src="cordova.js"></script>
+    <script src="cordova.ios.js"></script>
     <script src="js/jquery-1.9.1.min.js"></script>
-    <script src="kendo/js/kendo.mobile.min.js"></script>
-    <script src="scripts/app.js"></script>
     <script src="js/foundation.min.js"></script>
-    <script src="js/analytics.js"></script>
     <script>
         $(document).foundation();
+        
 
-        window.analytics.Start();
 
     </script>
 </body>

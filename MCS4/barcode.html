@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page 1</title>
+    <title>Foundation | Welcome</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <script src="js/vendor/modernizr.js"></script>
     <link href="css/ratchetCS.css" rel="stylesheet" />
@@ -34,7 +34,26 @@
                 How Much Space?
             </div>
             <div class="panel">
-                <p>To get</p>
+                
+                <header class="header">
+                    <h1>Barcode Scanner</h1>
+                </header>
+                <div class="content">
+                    <div class="action-area ch40">
+                        <button class="button dh dw" id="scanButton">Scan</button>
+                    </div>
+                    <div class="result-area ch60">
+                        <div class="results">
+                            <div id="result" class="desc"></div>
+                        </div>
+                        <div class="separator"></div>
+                    </div>
+                </div>
+                <footer class="footer">
+                    <div>Cordova Plugins Samples</div>
+                </footer>
+
+
             </div>
         </div>
     </div>
@@ -55,7 +74,7 @@
             <span class="icon icon-beer"></span>
             <span class="tab-label">Kitchen</span>
         </a>
-        <a class="tab-item" href="barcode.html">
+        <a class="tab-item" href="menus.html">
             <span class="icon icon-star8"></span>
             <span class="tab-label">Menus</span>
         </a>
@@ -76,6 +95,8 @@
     <script src="js/vendor/fastclick.js"></script>
     <script src="js/foundation.min.js"></script>
     <script src="js/cession.js"></script>
+    <script src="cordova.ios.js"></script>
+    <script src="scripts/main.js"></script>
     <script>
         $(document).foundation();
     </script>
